@@ -1,6 +1,6 @@
 <?php
- include("Particion/header.php");
-?>
+ include("partials/header.php");
+ ?>
    <div id="about" class="shop">
       <div class="container-fluid">
          <div class="row">
@@ -13,7 +13,10 @@
                   <div class="max_width">
                      <div class="titlepage">
                         <h2>Best SunGlasses  At Our shop</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        </p>
                         <a class="read_more" href="glasses.php">Shop Now</a>
                      </div>
                   </div>
@@ -23,5 +26,5 @@
       </div>
       <!-- end Our shop section -->
       <?php
-         include("Particion/footer.php");
-      ?>
+         include("partials/footer.php");
+         ?>

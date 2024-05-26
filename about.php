@@ -1,6 +1,6 @@
 <?php
- include("Particion/header.php");
-?>
+ include("partials/header.php");
+ ?>
       <div class="about">
          <div class="container">
             <div class="row d_flex">
@@ -20,5 +20,5 @@
       </div>
       <!-- about section -->
       <?php
-         include("Particion/footer.php");
+         include("partials/footer.php");
       ?>
