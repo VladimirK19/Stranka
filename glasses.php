@@ -1,6 +1,7 @@
 <?php
- include("partials/header.php");
+ include_once("partials/header.php");
  ?>
+   <main>
       <div class="glasses">
          <div class="container">
             <div class="row">
@@ -14,11 +15,16 @@
                </div>
             </div>
          </div>
-         <?php
-         include("partials/glasses_dispay.php");
-         ?>
+         <div class="container-fluid">
+            <div class="row">
+               <?php
+                  include_once("partials/glasses_dispay.php");
+                  ?>
+            </div>
+         </div>
       </div>
+   </main>
       <!-- end Our  Glasses section -->
       <?php
-         include("partials/footer.php");
+         include_once("partials/footer.php");
          ?>

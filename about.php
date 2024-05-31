@@ -1,12 +1,14 @@
 <?php
- include("partials/header.php");
+ include_once("partials/header.php");
  ?>
-      <div class="about">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-5">
-                  <div class="about_img">
-                     <figure><img src="images/about_img.png" alt="#"/></figure>
+ <main>
+
+    <div class="about">
+       <div class="container">
+          <div class="row d_flex">
+             <div class="col-md-5">
+                <div class="about_img">
+                   <figure><img src="images/about_img.png" alt="#"/></figure>
                   </div>
                </div>
                <div class="col-md-7">
@@ -19,6 +21,7 @@
          </div>
       </div>
       <!-- about section -->
+</main>
       <?php
-         include("partials/footer.php");
+         include_once("partials/footer.php");
       ?>

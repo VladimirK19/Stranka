@@ -1,5 +1,5 @@
 <section class="banner_main">
-         <div id="banner1" class="carousel slide" data-ride="carousel">
+   <div id="banner1" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#banner1" data-slide-to="0" class="active"></li>
                <li data-target="#banner1" data-slide-to="1"></li>
@@ -46,5 +46,5 @@
             <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
             <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </a>
-         </div>
-      </section>
+   </div>
+</section>

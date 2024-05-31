@@ -12,11 +12,11 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
       <link rel="stylesheet" href="css/style.css">
       <!-- Responsive-->
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
       <link rel="icon" href="images/fevicon.png" type="image/gif" />
@@ -77,7 +77,7 @@
                               <a class="nav-link" href="#">Login</a>
                            </li>
                            <li class="nav-item d_none">
-                              <a class="nav-link" href="#">Register</a>
+                              <a class="nav-link" href="/stranka/partials/register.php">Register</a>
                            </li>
                            <li class="nav-item d_none sea_icon">
                               <a class="nav-link" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><i class="fa fa-search" aria-hidden="true"></i></a>

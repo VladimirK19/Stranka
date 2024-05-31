@@ -1,5 +1,5 @@
 <?php
- include("partials/header.php");
+ include_once("partials/header.php");
  ?>
    <div id="about" class="shop">
       <div class="container-fluid">
@@ -26,5 +26,5 @@
       </div>
       <!-- end Our shop section -->
       <?php
-         include("partials/footer.php");
+         include_once("partials/footer.php");
          ?>

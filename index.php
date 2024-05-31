@@ -1,8 +1,8 @@
 <?php
- include("partials/header.php");
- include("partials/banner.php");
-
+ include_once("partials/header.php");
+ include_once("partials/banner.php");
 ?>
+
       <!-- about section -->
       <div class="about">
          <div class="container">
@@ -97,11 +97,6 @@
       <!-- clients section -->
       <?php
       include("partials/client_section.php");
-
-      //contact section
-      include("partials/contact_form.php");
-
-      //footer
-      include("partials/footer.php");
+      include_once("partials/footer.php");
          ?>
       
