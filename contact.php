@@ -1,6 +1,6 @@
 <?php
- include("partials/header.php");
- require("partials/connection.php");
+ include_once("partials/header.php");
+ include_once("partials/connection.php");
 
    $name="";
    $phone="";

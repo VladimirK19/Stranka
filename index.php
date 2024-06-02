@@ -96,7 +96,7 @@
 
       <!-- clients section -->
       <?php
-      include("partials/client_section.php");
+      include_once("partials/client_section.php");
       include_once("partials/footer.php");
          ?>
       

@@ -1,6 +1,6 @@
 
 <?php
- require_once("connection.php");
+ include_once("connection.php");
 $sql = "SELECT image, name, price FROM glasses";
 $result = $connection->query($sql);
 
