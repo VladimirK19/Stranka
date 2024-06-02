@@ -32,7 +32,7 @@
 
         $result = $connection->query($sql);
         if(!$result){
-            die("Invalid query:".$conn->connection_error);
+            die("Invalid query:".$connection->connection_error);
         }
 
         while($row=$result->fetch_assoc()){
