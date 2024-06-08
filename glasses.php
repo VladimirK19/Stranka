@@ -17,8 +17,8 @@ include_once("partials/header.php");
             <div class="row">
                 <?php
                 include_once('_inc/classes/Glasses_Display.php');
-                $glassesDB = new Glasses_Display();
-                $glassesDB->getGlasses();
+                $glasses_display = new Glasses_Display();
+                $glasses_display->getGlasses();
                 ?>
             </div>
         </div>

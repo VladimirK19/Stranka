@@ -32,36 +32,29 @@
                               </div>
                            </div>
                         </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <div class="row">
-                                    <div class="col-md-12">
-                                       <div class="clients_box">
-                                          <figure><img src="images/our.png" alt="#"/></figure>
-                                          <h3>Sandy Mark</h3>
-                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact  a more-or-less normal distribution of letters,</p>
+                           <?php 
+                           echo'<div class="container-fluid">
+                           <div class="row">';
+                           for ($i = 1; $i <= 4; $i++) {
+                              echo'<div class="carousel-item">
+                              <div class="container">
+                                 <div class="carousel-caption">
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <div class="clients_box">
+                                             <figure><img src="images/our.png" alt="#"/></figure>
+                                             <h3>Sandy Mark</h3>
+                                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact  a more-or-less normal distribution of letters,</p>
+                                          </div>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <div class="row">
-                                    <div class="col-md-12">
-                                       <div class="clients_box">
-                                          <figure><img src="images/our.png" alt="#"/></figure>
-                                          <h3>Sandy Mark</h3>
-                                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact  a more-or-less normal distribution of letters,</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                           </div>';
+                           };
+                           echo'</div>
+                              </div>'
+                           ?>
                      </div>
                      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                      <i class='fa fa-angle-left'></i>

@@ -1,58 +1,7 @@
 <?php
- include_once("partials/header.php");
- include_once("partials/connection.php");
-
-   $name="";
-   $phone="";
-   $email="";
-   $message="";
+   include_once("partials/header.php");
+   require_once("_inc/classes/Contact.php");
    
-   $name_error="";
-   $phone_error="";
-   $email_error="";
-   $message_error="";
-   
-   $error=false;
-   if($_SERVER['REQUEST_METHOD']=='POST'){
-      $name=$_POST["name"];
-      $phone=$_POST["phone"];
-      $email=$_POST["email"];
-      $message=$_POST["message"];
-      
-      do{
-         if(empty($name)){
-            $name_error="First name is required";
-            $error=true;
-            break;
-         }
-         if (!preg_match("/^(\+|00\d{1,3})?[- ]?\d{7,12}$/", $phone)) {
-            $phone_error = "Phone format is not valid";
-            $error = true;
-            break;
-         }
-         if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-            $email_error = "Email format is not valid";
-            $error=true;
-            break;
-         }
-         if(empty($message)){
-            $message_error="message is empty";
-            $error=true;
-            break;
-         }
-         if(!$error){
-            $sql="INSERT INTO contact(name,phone,email,message) VALUES('$name','$phone','$email','$message')";
-            $result = $connection->query($sql);
-         }
-         if(!$result){
-            $errorMessage="Invalid query" . $connection->error;
-            break;
-         }
-         
-         $successMessage="Message was sent";
-                  
-      }while(false);
-   }
    ?>
    <main>
    <!-- contact section -->
@@ -60,39 +9,31 @@
       <div class="container">
          <div class="row">
             <div class="col-md-6">
-               <form id="request" class="main_form" method="POST">
+               <form id="request" class="main_form" action="thankyou.php" method="POST">
                   <div class="row">
                      <div class="col-md-12 ">
                         <h3>Contact Us</h3>
                         <?php
-                           if(!empty($successMessage)){
-                           echo"
-                                    <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                                       <strong>$successMessage</strong>
-                                       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                                    </div>
-                           ";
-                        }
                         ?>
                      </div>
                      <div class="col-md-12 ">
                         <input class="contactus" placeholder="Name"  type="text" name="name" value="" required> 
-                        <span class="text-danger"><?=$name_error?></span>
                      </div>
                      <div class="col-md-12">
-                        <input class="contactus" placeholder="Phone number"   type="phone" name="phone" value=""> 
-                        <span class="text-danger"><?=$phone_error?></span>
+                        <input class="contactus" placeholder="Phone number"   type="phone" name="phone" value=""required> 
                      </div>
                      <div class="col-md-12">
-                        <input class="contactus" placeholder="Email"   type="email" name="email" value="">   
-                        <span class="text-danger"><?=$email_error?></span>                       
+                        <input class="contactus" placeholder="Email"   type="email" name="email" value=""required>   
                      </div>
                      <div class="col-md-12">
-                     <input class="contactus" placeholder="Message"   type="message" name="message" value="">   
-                        <span class="text-danger"><?=$message_error?></span>
+                     <input class="contactus" placeholder="Message"   type="message" name="message" value=""required>   
                      </div>
                      <div class="col-md-12">
-                        <button type="submit" value="SEND" class="send_btn">Send</button>
+                        <input type="checkbox" name="acceptance" value="1" required>
+                        <label> Súhlasím so spracovaním osobných údajov.</label><br>
+                     </div>
+                     <div class="col-md-12">
+                        <button type="submit" value="SEND" name="contact_submitted" class="send_btn">Send</button>
                      </div>
                   </div>
                </form>

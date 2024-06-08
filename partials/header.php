@@ -1,3 +1,6 @@
+<?php
+  require_once('_inc/classes/Menu.php');
+  ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -58,30 +61,19 @@
                      </button>
                      <div class="collapse navbar-collapse" id="navbarsExample04">
                         <ul class="navbar-nav mr-auto">
-                           <li class="nav-item ">
-                              <a class="nav-link" href="index.php">Home</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="about.php">About</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="glasses.php">Our Glasses</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="shop.php">Shop</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="contact.php">Contact Us</a>
-                           </li>
-                           <li class="nav-item d_none login_btn">
-                              <a class="nav-link" href="#">Login</a>
-                           </li>
-                           <li class="nav-item d_none">
-                              <a class="nav-link" href="/stranka/partials/register.php">Register</a>
-                           </li>
-                           <li class="nav-item d_none sea_icon">
-                              <a class="nav-link" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><i class="fa fa-search" aria-hidden="true"></i></a>
-                           </li>
+                           <?php
+                                    $pages = array('Home'=>'index.php',
+                                    'About'=>'about.php',
+                                    'Our Glasses'=>'glasses.php',
+                                    'Shop'=>'shop.php',
+                                    'Contact Us'=>'contact.php',
+
+                              );
+                              
+                              $menu_object = new Menu($pages);
+                              echo($menu_object->generate_menu());
+
+                           ?>
                         </ul>
                      </div>
                   </nav>

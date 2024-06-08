@@ -17,7 +17,11 @@
                      </div>
                   </div>
                </div>
-               <div class="carousel-item">
+               <?php 
+               echo'<div class="container-fluid">
+               <div class="row">';
+               for ($i = 1; $i <= 2; $i++) {
+                  echo'<div class="carousel-item">
                   <div class="container">
                      <div class="carousel-caption">
                         <div class="text-bg">
@@ -27,19 +31,11 @@
                         </div>
                      </div>
                   </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="text-bg">
-                           <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                           <figure><img src="images/banner_img.png" alt="#"/></figure>
-                           <a class="read_more" href="glasses.php">Shop Now</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+               </div>';
+               };
+               echo'</div>
+                  </div>'
+               ?>
             <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </a>

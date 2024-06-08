@@ -1,5 +1,5 @@
 <?php
-include_once("connection.php");
+require_once("connection.php");
 
 class Glasses_Display extends Database {
     public function getGlasses() {

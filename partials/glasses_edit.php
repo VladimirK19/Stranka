@@ -1,13 +1,10 @@
 <?php
-include('../_inc/classes/Edit.php');
-
-$Glasses_edit = new Edit();
-
+require_once('../_inc/classes/Edit.php');
 $id = "";
 $name = "";
 $image = "";
 $price = "";
-
+$edit = new Edit();
 $errorMessage = "";
 $successMessage = "";
 
@@ -19,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     $id = $_GET["id"];
 
-    $row = $Glasses_edit->getGlassesById($id);
+    $row = $edit->getGlassesById($id);
 
     if (!$row) {
         header("location:/stranka/glasses_admin.php");
@@ -28,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $name = $row["name"];
     $image = $row["image"];
     $price = $row["price"];
-} else {
+} else{
     $id = $_POST["id"];
     $name = $_POST["name"];
     $image = $_POST["image"];
@@ -40,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             break;
         }
 
-        if ($Glasses_edit->updateGlasses($id, $name, $image, $price)) {
+        if ($edit->updateGlasses($id, $name, $image, $price)) {
             $successMessage = "Client updated correctly";
             header("location:/stranka/glasses_admin.php");
             exit;
@@ -51,8 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     } while (false);
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 </head>
 <body>
     <div class="container my-5">
-        <h2>New product</h2>
+        <h2>Edit Item</h2>
 
         <?php
         if(!empty($errorMessage)){
@@ -78,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         ?>
 
         <form method="POST">
-            <input type="hidden" name="id" value="<?php echo $id;?>">
+            <input type="hidden" name="id"  value="<?php echo $id;?>">
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Name</label>
                 <div class="col-sm-6">
@@ -116,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             ?>
             <div class="row mb-3">
                 <div class="offset-sm-3 col-sm-3 d-grid">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit"class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-3 d-grid">
                     <a class="btn btn-outline-primary"href="/stranka/glasses_admin.php" role="button">Cancel</a>
@@ -126,3 +123,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     </div>
 </body>
 </html>
+

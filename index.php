@@ -37,36 +37,21 @@
                </div>
             </div>
          </div>
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass1.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>50</h3>
-                     <p>Sunglasses</p>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass2.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>50</h3>
-                     <p>Sunglasses</p>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass3.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>50</h3>
-                     <p>Sunglasses</p>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                  <div class="glasses_box">
-                     <figure><img src="images/glass4.png" alt="#"/></figure>
-                     <h3><span class="blu">$</span>50</h3>
-                     <p>Sunglasses</p>
-                  </div>
-               </div>
+               <?php 
+               echo'<div class="container-fluid">
+               <div class="row">';
+               for ($i = 1; $i <= 4; $i++) {
+                  echo'<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="glasses_box">
+                           <figure><img src="images/glass'.$i.'.png" alt="#"/></figure>
+                           <h3><span class="blu">$</span>50</h3>
+                           <p>Sunglasses</p>
+                        </div>
+                     </div>';
+               };
+               echo'</div>
+                  </div>'
+               ?>
                <a class="read_more" href="glasses.php">See More</a>
             </div>
          </div>
